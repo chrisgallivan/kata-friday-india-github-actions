@@ -8,7 +8,7 @@ terraform {
   backend "remote" {
     organization = "KATA-FRIDAYS"
     workspaces {
-      name = "kata-friday-test"
+      name = "kata-friday-india-github-actions"
     }
   }
 }
