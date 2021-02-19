@@ -87,3 +87,9 @@ jobs:
         name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
+
+      - 
+        name: Scan image
+        uses: anchore/scan-action@v2
+        with:
+          image: "chrisgallivan/hugo-cicd:latest"
